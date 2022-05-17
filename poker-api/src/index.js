@@ -21,6 +21,15 @@ io.on('connection', socket => {
         estUser.value=data.value
         users.push(estUser)
         io.emit('usersdata',users)
+    })
+    socket.on('userMode', data=>{
+        let modeUser = users.filter((user)=>user.name===data.user.name)[0]
+        console.log(modeUser,users)
+        users.pop(modeUser)
+        modeUser.value=''
+        modeUser.mode=data.userMode
+        users.push(modeUser)
+        io.emit('usersdata',users)
     })  
     socket.on('disconnect', (socket) => {
         console.log(users)
