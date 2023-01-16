@@ -12,7 +12,8 @@ io.on('connection', socket => {
     socket.on('joinpage',name=>{
         let user={id:socket.id,name,value:'',mode:false}
         if (user){
-            console.log("hello, hi")
+            console.log("hello, hi all")
+            console.log("hello, hi all of you")
         }
         socket.emit('userdata', user)
         users.push(user)
