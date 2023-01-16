@@ -12,7 +12,7 @@ io.on('connection', socket => {
     socket.on('joinpage',name=>{
         let user={id:socket.id,name,value:'',mode:false}
         if (user){
-            console.log("hello")
+            console.log("hello, hi")
         }
         socket.emit('userdata', user)
         users.push(user)
