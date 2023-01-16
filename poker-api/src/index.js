@@ -11,6 +11,9 @@ let a=0
 io.on('connection', socket => {
     socket.on('joinpage',name=>{
         let user={id:socket.id,name,value:'',mode:false}
+        if (user){
+            console.log("hello")
+        }
         socket.emit('userdata', user)
         users.push(user)
         io.emit('usersdata',users)
