@@ -13,7 +13,6 @@ io.on('connection', socket => {
         let user={id:socket.id,name,value:'',mode:false}
         if (user){
             console.log("hello, hi all")
-            console.log("hello, hi all")
             console.log("hello, hi all of you")
         }
         socket.emit('userdata', user)
